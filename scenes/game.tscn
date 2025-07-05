@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgwgfyprdm7m7"]
+[gd_scene load_steps=6 format=3 uid="uid://cgwgfyprdm7m7"]
 
 [ext_resource type="Texture2D" uid="uid://cic1t2l8qclvt" path="res://assets/background.png" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://mkdh82pu8wm0" path="res://scenes/plant.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://frd024cmtcra" path="res://assets/shelves.png" id="2_iywne"]
 [ext_resource type="Texture2D" uid="uid://b044jeg6sat6u" path="res://assets/bars.png" id="4_p57ef"]
+[ext_resource type="Script" uid="uid://bqk0lwb5qtns4" path="res://scripts/camera_2d.gd" id="5_iywne"]
 
 [node name="Game" type="Node2D"]
 
@@ -26,3 +27,7 @@ metadata/_edit_lock_ = true
 position = Vector2(1291, 726)
 texture = ExtResource("4_p57ef")
 metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1287, 726)
+script = ExtResource("5_iywne")
