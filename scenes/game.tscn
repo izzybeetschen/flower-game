@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://cgwgfyprdm7m7"]
+[gd_scene load_steps=2 format=3 uid="uid://cgwgfyprdm7m7"]
+
+[ext_resource type="PackedScene" uid="uid://mkdh82pu8wm0" path="res://scenes/plant.tscn" id="1_uwrxv"]
 
 [node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 322)
+
+[node name="plant" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(558, 309)
+animation = &"sprout"

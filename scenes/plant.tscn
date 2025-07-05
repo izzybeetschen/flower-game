@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://mkdh82pu8wm0"]
+
+[ext_resource type="Texture2D" uid="uid://dk357v2fglrq8" path="res://assets/placeholder/plant1.jpg" id="1_odjdt"]
+[ext_resource type="Texture2D" uid="uid://cosgpog1fnxly" path="res://assets/placeholder/plant2.jpg" id="2_a88lo"]
+[ext_resource type="Script" uid="uid://b55vjc28ehqug" path="res://scripts/plant.gd" id="3_a88lo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5w0e"]
+atlas = ExtResource("1_odjdt")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toh6u"]
+atlas = ExtResource("2_a88lo")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ptog4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5w0e")
+}],
+"loop": true,
+"name": &"sprout",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toh6u")
+}],
+"loop": true,
+"name": &"stem",
+"speed": 5.0
+}]
+
+[node name="plant" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ptog4")
+animation = &"stem"
+script = ExtResource("3_a88lo")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
