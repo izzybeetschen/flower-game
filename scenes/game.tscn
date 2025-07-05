@@ -7,21 +7,22 @@
 
 [node name="Game" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(577, 322)
-
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(1286, 726)
 texture = ExtResource("1_lbhrr")
+metadata/_edit_lock_ = true
 
 [node name="Shelves" type="Sprite2D" parent="."]
 position = Vector2(1293, 731)
 texture = ExtResource("2_iywne")
+metadata/_edit_lock_ = true
 
 [node name="plant" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(413, 861)
 animation = &"sprout"
+metadata/_edit_lock_ = true
 
 [node name="Bars" type="Sprite2D" parent="."]
 position = Vector2(1291, 726)
 texture = ExtResource("4_p57ef")
+metadata/_edit_lock_ = true
